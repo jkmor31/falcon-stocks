@@ -1,9 +1,12 @@
 package com.falcon.stocks.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 
 @Entity(name = "stock_data")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
