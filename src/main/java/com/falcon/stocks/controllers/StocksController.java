@@ -8,9 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-@RestController
+@RestController(value = "/products")
 @RequestMapping("/stocks")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class StocksController {
     @Autowired
     private StockRepository stockRepository;
