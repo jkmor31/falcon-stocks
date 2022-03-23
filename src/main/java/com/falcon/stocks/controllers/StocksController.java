@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/stocks")
+@CrossOrigin(origins = "http://localhost:8080")
 public class StocksController {
     @Autowired
     private StockRepository stockRepository;
